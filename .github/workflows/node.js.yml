@@ -35,7 +35,7 @@ jobs:
         key: ${{secrets.PRIVATE_KEY}}
         host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
-        port: ${{22}}
+        port: ${{ 22 }}
         script: |
           pm2 delete all
           cd /var/app/testCD
