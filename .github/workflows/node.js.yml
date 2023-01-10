@@ -29,13 +29,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     
-    - name: remote_ssh_commands
+    - name: remote_ssh_commands stp
       uses: Sithi5/remote-ssh-commands-action@1.1.2
       with: 
         key: ${{secrets.PRIVATE_KEY}}
         host: ${{secrets.HOST}}
         username: ${{secrets.USERNAME}}
-        port: ${{ 22 }}
+        port: ${{22}}
         script: |
           pm2 delete all
           cd /var/app/testCD
