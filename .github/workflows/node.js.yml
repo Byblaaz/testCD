@@ -34,7 +34,7 @@ jobs:
       with: 
         key: ${{secrets.PRIVATE_KEY}}
         host: ${{secrets.HOST}}
-        username: ${{secretsUSERNAME}}
+        username: ${{secrets.USERNAME}}
         script: |
           pm2 delete all
           cd /var/app/testCD
