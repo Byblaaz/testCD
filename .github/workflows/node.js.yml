@@ -35,7 +35,7 @@ jobs:
       with: 
         SSH_HOST: ${{ secrets.HOST }}
         SSH_USER: ${{ secrets.USERNAME }}
-        SSH_PASSWORD: ${{ secrets.PASSWORD }}
+        password: ${{ secrets.PASSWORD }}
         SSH_REMOTE_COMMANDS: |
           pm2 delete all
           cd /var/app/testCD
