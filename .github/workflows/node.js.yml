@@ -31,7 +31,7 @@ jobs:
     - run: mkdir ${{ secrets.HOST }}
     
     - name: remote_ssh_commands stp
-      uses: Sithi5/remote-ssh-commands-action@1.1.2
+      uses: appleboy/ssh-action@v0.1.7
       with: 
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
