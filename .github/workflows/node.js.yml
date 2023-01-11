@@ -39,6 +39,7 @@ jobs:
         debug: true
         script: |
           cd /var/app/testCD
-          git pull
+          git pull origin master
+          git status
           npm install
           pm2 start npm -- start
