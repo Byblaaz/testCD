@@ -32,10 +32,10 @@ jobs:
     - name: remote_ssh_commands stp
       uses: Sithi5/remote-ssh-commands-action@1.1.2
       with: 
-        key: ${{ secrets.PRIVATE_KEY }}
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        port: ${{ 22 }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ 22 }}
+        KEY: ${{ secrets.PRIVATE_KEY }}
         script: |
           pm2 delete all
           cd /var/app/testCD
