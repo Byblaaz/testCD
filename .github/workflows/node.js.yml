@@ -33,10 +33,10 @@ jobs:
     - name: remote_ssh_commands stp
       uses: Sithi5/remote-ssh-commands-action@1.1.2
       with: 
-        SSH_HOST: ${{ secrets.HOST }}
-        SSH_USER: ${{ secrets.USERNAME }}
-        SSH_PRIVATE_KEY: ${{ secrets.PASSWORD }}
-        SSH_REMOTE_COMMANDS: |
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
           pm2 delete all
           cd /var/app/testCD
           git pull
