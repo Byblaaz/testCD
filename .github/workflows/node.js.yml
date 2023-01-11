@@ -32,9 +32,9 @@ jobs:
     - name: remote_ssh_commands stp
       uses: Sithi5/remote-ssh-commands-action@1.1.2
       with: 
-        key: ${{secrets.PRIVATE_KEY}}
-        host: ${{secrets.HOST}}
-        username: ${{secrets.USERNAME}}
+        key: ${{ secrets.PRIVATE_KEY }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
         port: ${{ 22 }}
         script: |
           pm2 delete all
