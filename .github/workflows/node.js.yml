@@ -34,7 +34,7 @@ jobs:
       uses: Sithi5/remote-ssh-commands-action@1.1.2
       with: 
         SSH_HOST: ${{ secrets.HOST }}
-        SSH_USER: ${{ gitAction }}
+        SSH_USER: ${{ secrets.USERNAME }}
         SSH_PASSWORD: ${{ secrets.PASSWORD }}
         SSH_REMOTE_COMMANDS: |
           pm2 delete all
